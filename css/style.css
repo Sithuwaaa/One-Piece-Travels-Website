@@ -1,0 +1,277 @@
+/* ===== GOOGLE FONTS ===== */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Nunito:wght@300;400;500;600;700&display=swap");
+
+/* ===== CSS VARIABLES ===== */
+:root {
+  --navy: #0a1628;
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --ocean: #1a3a5c;
+  --cloud: #f4f7fb;
+  --white: #ffffff;
+  --slate: #6b7a99;
+  --border: #e0e8f0;
+
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Nunito", sans-serif;
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--navy);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== NAVBAR ===== */
+#mainNavbar {
+  background-color: var(--navy);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+  box-shadow: 0 2px 20px rgba(10, 22, 40, 0.25);
+}
+
+/* Brand / Logo */
+#mainNavbar .navbar-brand {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--white);
+  padding: 18px 0;
+}
+
+/* Gold accent on brand name */
+#mainNavbar .navbar-brand span {
+  color: var(--gold);
+}
+
+/* Nav Links */
+#mainNavbar .nav-link {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 28px 16px !important;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+/* Underline effect on hover */
+#mainNavbar .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+  right: 16px;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+#mainNavbar .nav-link:hover,
+#mainNavbar .nav-link.active {
+  color: var(--gold);
+}
+
+#mainNavbar .nav-link:hover::after,
+#mainNavbar .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Contact Us button style */
+#mainNavbar .btn-contact {
+  background: var(--gold);
+  color: var(--navy) !important;
+  border-radius: 50px;
+  padding: 8px 22px !important;
+  font-weight: 700 !important;
+  margin-left: 8px;
+}
+
+#mainNavbar .btn-contact:hover {
+  background: var(--gold-light);
+}
+
+#mainNavbar .btn-contact::after {
+  display: none;
+}
+
+/* Mobile toggler icon */
+#mainNavbar .navbar-toggler {
+  border: 1px solid rgba(201, 168, 76, 0.4);
+  padding: 6px 10px;
+}
+
+#mainNavbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28201,168,76,1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ===== HERO SECTION ===== */
+#hero {
+  min-height: 92vh;
+  background-color: var(--navy);
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Background image with dark overlay */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("https://images.pexels.com/photos/35451821/pexels-photo-35451821.jpeg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.28;
+}
+
+/* Keep content above background */
+#hero .container {
+  position: relative;
+  z-index: 2;
+  padding: 100px 0;
+}
+
+/* Small label above title */
+.hero-label {
+  display: inline-block;
+  background: rgba(201, 168, 76, 0.15);
+  color: var(--gold);
+  border: 1px solid rgba(201, 168, 76, 0.35);
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  margin-bottom: 24px;
+}
+
+/* Main H1 title */
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+/* Gold accent word */
+.hero-accent {
+  color: var(--gold);
+}
+
+/* Subtitle paragraph */
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 520px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+/* CTA Buttons row */
+.hero-btns {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+/* Gold filled button */
+.btn-gold {
+  background: var(--gold);
+  color: var(--navy);
+  border-radius: 50px;
+  padding: 14px 36px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+  display: inline-block;
+}
+
+.btn-gold:hover {
+  background: var(--gold-light);
+  color: var(--navy);
+  transform: translateY(-2px);
+}
+
+/* White outline button */
+.btn-outline-wh {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  padding: 12px 36px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-outline-wh:hover {
+  border-color: var(--white);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+}
+
+/* Stats row */
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-num {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ===== RESPONSIVE — HERO ===== */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-stats {
+    gap: 20px;
+  }
+
+  #hero .container {
+    padding: 70px 0;
+  }
+}
