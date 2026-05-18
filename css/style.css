@@ -361,3 +361,130 @@ a {
     padding: 60px 0;
   }
 }
+
+/* ===== FEATURED PACKAGES ===== */
+#featured-packages {
+  padding: 90px 0;
+  background-color: var(--cloud);
+}
+
+/* Card wrapper */
+.package-card {
+  background: var(--white);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  height: 100%;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 48px rgba(10, 22, 40, 0.15);
+}
+
+/* Image area */
+.package-img-wrap {
+  height: 210px;
+  overflow: hidden;
+  position: relative;
+}
+
+.package-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.package-card:hover .package-img-wrap img {
+  transform: scale(1.06);
+}
+
+/* Badge on image */
+.package-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 50px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Card body */
+.package-body {
+  padding: 22px;
+}
+
+.package-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+/* Duration and location row */
+.package-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 0.83rem;
+  color: var(--slate);
+  margin-bottom: 12px;
+}
+
+.package-meta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Price */
+.package-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.package-price small {
+  font-size: 0.78rem;
+  color: var(--slate);
+  font-weight: 400;
+}
+
+/* Outline navy button */
+.btn-outline-nv {
+  display: inline-block;
+  background: transparent;
+  color: var(--navy);
+  border: 2px solid var(--navy);
+  border-radius: 50px;
+  padding: 13px 36px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-nv:hover {
+  background: var(--navy);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* ===== RESPONSIVE — PACKAGES ===== */
+@media (max-width: 768px) {
+  #featured-packages {
+    padding: 60px 0;
+  }
+
+  .package-img-wrap {
+    height: 180px;
+  }
+}
