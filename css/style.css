@@ -488,3 +488,150 @@ a {
     height: 180px;
   }
 }
+
+/* ===== TOP DESTINATIONS ===== */
+#top-destinations {
+  padding: 90px 0;
+  background-color: var(--white);
+}
+
+/* Destination card */
+.dest-card {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  height: 260px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.dest-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Image */
+.dest-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.dest-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Dark gradient overlay */
+.dest-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 22, 40, 0.82) 0%,
+    rgba(10, 22, 40, 0.05) 60%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 22px;
+}
+
+/* Destination name */
+.dest-name {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+/* Package count */
+.dest-count {
+  font-size: 0.8rem;
+  color: var(--gold);
+  font-weight: 500;
+}
+
+/* ===== RESPONSIVE — DESTINATIONS ===== */
+@media (max-width: 768px) {
+  #top-destinations {
+    padding: 60px 0;
+  }
+
+  .dest-card {
+    height: 200px;
+  }
+
+  .dest-name {
+    font-size: 1.1rem;
+  }
+}
+
+/* ===== TESTIMONIALS ===== */
+#testimonials {
+  padding: 90px 0;
+  background-color: var(--cloud);
+}
+
+/* Card */
+.testi-card {
+  background: var(--navy);
+  border-radius: 20px;
+  padding: 32px;
+  height: 100%;
+}
+
+/* Big opening quote mark */
+.testi-quote {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--gold);
+  opacity: 0.4;
+  margin-bottom: -10px;
+}
+
+/* Star rating */
+.testi-stars {
+  color: var(--gold);
+  font-size: 0.9rem;
+  margin-bottom: 14px;
+}
+
+/* Review text */
+.testi-text {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Reviewer name */
+.testi-name {
+  font-weight: 700;
+  color: var(--gold);
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+}
+
+/* Reviewer job / location */
+.testi-info {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* ===== RESPONSIVE — TESTIMONIALS ===== */
+@media (max-width: 768px) {
+  #testimonials {
+    padding: 60px 0;
+  }
+
+  .testi-card {
+    padding: 24px;
+  }
+
+  .testi-quote {
+    font-size: 3rem;
+  }
+}
