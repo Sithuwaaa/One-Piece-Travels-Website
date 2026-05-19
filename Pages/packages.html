@@ -19,7 +19,399 @@
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <!-- Your content goes here -->
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg" id="mainNavbar">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          One <span>Piece</span> Travels
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="destinations.html">Destinations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="packages.html">Packages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="fleet.html">Fleet</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn-contact" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section id="page-hero">
+      <div class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb-wrap">
+          <a href="../index.html">Home</a>
+          <span>/</span>
+          <span class="current">Packages</span>
+        </div>
+
+        <h1 class="page-hero-title">Solo Caravan Packages</h1>
+        <p class="page-hero-sub">
+          Browse and filter curated packages for every solo travel style and
+          budget.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== FILTER BAR ===== -->
+    <section id="filter-section">
+      <div class="container">
+        <div class="filter-bar">
+          <div class="row g-3 align-items-end">
+            <!-- Destination Filter -->
+            <div class="col-md-3">
+              <label class="filter-label">Destination</label>
+              <select class="filter-select" id="filterDest">
+                <option value="">All Destinations</option>
+                <option value="galle">Galle</option>
+                <option value="ella">Ella</option>
+                <option value="sigiriya">Sigiriya</option>
+                <option value="mirissa">Mirissa</option>
+                <option value="nuwara">Nuwara Eliya</option>
+                <option value="trinco">Trincomalee</option>
+              </select>
+            </div>
+
+            <!-- Duration Filter -->
+            <div class="col-md-3">
+              <label class="filter-label">Duration</label>
+              <select class="filter-select" id="filterDur">
+                <option value="">Any Duration</option>
+                <option value="weekend">Weekend (2–3 Days)</option>
+                <option value="short">Short (4–6 Days)</option>
+                <option value="week">Week (7 Days)</option>
+                <option value="extended">Extended (8+ Days)</option>
+              </select>
+            </div>
+
+            <!-- Price Filter -->
+            <div class="col-md-3">
+              <label class="filter-label">Price Range</label>
+              <select class="filter-select" id="filterPrice">
+                <option value="">Any Price</option>
+                <option value="low">Budget (Under $400)</option>
+                <option value="mid">Mid ($400 – $800)</option>
+                <option value="high">Premium ($800+)</option>
+              </select>
+            </div>
+
+            <!-- Buttons -->
+            <div class="col-md-3 d-flex gap-2">
+              <button class="btn-gold w-100" id="filterSearch">Search</button>
+              <button class="btn-outline-nv" id="filterReset">Reset</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- No Results Message -->
+        <div id="noResults" style="display: none">
+          <i class="bi bi-search"></i>
+          No packages match your filters. Try adjusting your selection.
+        </div>
+
+        <!-- Packages Grid -->
+        <div class="row g-4" id="packagesGrid">
+          <!-- Package 1 -->
+          <div
+            class="col-lg-4 col-md-6 package-card-item"
+            data-dest="galle"
+            data-dur="week"
+            data-price="599"
+          >
+            <div class="package-card">
+              <div class="package-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80"
+                  alt="Coastal Caravan Escape"
+                />
+                <span class="package-badge">Best Seller</span>
+              </div>
+              <div class="package-body">
+                <h5 class="package-title">Coastal Caravan Escape</h5>
+                <div class="package-meta">
+                  <span><i class="bi bi-clock"></i> 7 Days</span>
+                  <span><i class="bi bi-geo-alt"></i> Galle & Mirissa</span>
+                </div>
+                <p class="package-desc">
+                  Cruise along the south coast, explore Galle Fort and relax on
+                  Mirissa's golden beaches.
+                </p>
+                <div class="package-price">$599 <small>/ person</small></div>
+                <a href="contact.html" class="btn-gold">Enquire Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package 2 -->
+          <div
+            class="col-lg-4 col-md-6 package-card-item"
+            data-dest="ella"
+            data-dur="short"
+            data-price="449"
+          >
+            <div class="package-card">
+              <div class="package-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=80"
+                  alt="Hill Country Retreat"
+                />
+                <span class="package-badge">Popular</span>
+              </div>
+              <div class="package-body">
+                <h5 class="package-title">Hill Country Retreat</h5>
+                <div class="package-meta">
+                  <span><i class="bi bi-clock"></i> 5 Days</span>
+                  <span><i class="bi bi-geo-alt"></i> Ella & Nuwara Eliya</span>
+                </div>
+                <p class="package-desc">
+                  Wake up in a caravan surrounded by misty tea estates. Hike
+                  Little Adam's Peak and ride the scenic train.
+                </p>
+                <div class="package-price">$449 <small>/ person</small></div>
+                <a href="contact.html" class="btn-gold">Enquire Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package 3 -->
+          <div
+            class="col-lg-4 col-md-6 package-card-item"
+            data-dest="sigiriya"
+            data-dur="extended"
+            data-price="799"
+          >
+            <div class="package-card">
+              <div class="package-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&q=80"
+                  alt="Ancient Kingdom Tour"
+                />
+                <span class="package-badge">New</span>
+              </div>
+              <div class="package-body">
+                <h5 class="package-title">Ancient Kingdom Tour</h5>
+                <div class="package-meta">
+                  <span><i class="bi bi-clock"></i> 10 Days</span>
+                  <span
+                    ><i class="bi bi-geo-alt"></i> Sigiriya & Polonnaruwa</span
+                  >
+                </div>
+                <p class="package-desc">
+                  Climb Sigiriya Rock Fortress and explore the ruins of the
+                  ancient city of Polonnaruwa.
+                </p>
+                <div class="package-price">$799 <small>/ person</small></div>
+                <a href="contact.html" class="btn-gold">Enquire Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package 4 -->
+          <div
+            class="col-lg-4 col-md-6 package-card-item"
+            data-dest="mirissa"
+            data-dur="weekend"
+            data-price="249"
+          >
+            <div class="package-card">
+              <div class="package-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1519981593452-666cf05afbc0?w=600&q=80"
+                  alt="Beach Weekend Getaway"
+                />
+                <span class="package-badge">Quick Escape</span>
+              </div>
+              <div class="package-body">
+                <h5 class="package-title">Beach Weekend Getaway</h5>
+                <div class="package-meta">
+                  <span><i class="bi bi-clock"></i> 3 Days</span>
+                  <span><i class="bi bi-geo-alt"></i> Mirissa</span>
+                </div>
+                <p class="package-desc">
+                  A perfect weekend escape to Mirissa's pristine beaches. Ideal
+                  for a short but refreshing recharge.
+                </p>
+                <div class="package-price">$249 <small>/ person</small></div>
+                <a href="contact.html" class="btn-gold">Enquire Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package 5 -->
+          <div
+            class="col-lg-4 col-md-6 package-card-item"
+            data-dest="trinco"
+            data-dur="week"
+            data-price="650"
+          >
+            <div class="package-card">
+              <div class="package-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?w=600&q=80"
+                  alt="East Coast Explorer"
+                />
+                <span class="package-badge">Adventure</span>
+              </div>
+              <div class="package-body">
+                <h5 class="package-title">East Coast Explorer</h5>
+                <div class="package-meta">
+                  <span><i class="bi bi-clock"></i> 7 Days</span>
+                  <span><i class="bi bi-geo-alt"></i> Trincomalee</span>
+                </div>
+                <p class="package-desc">
+                  Dive with whale sharks, explore Pigeon Island and camp near
+                  pristine reefs on the east coast.
+                </p>
+                <div class="package-price">$650 <small>/ person</small></div>
+                <a href="contact.html" class="btn-gold">Enquire Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package 6 -->
+          <div
+            class="col-lg-4 col-md-6 package-card-item"
+            data-dest="nuwara"
+            data-dur="extended"
+            data-price="999"
+          >
+            <div class="package-card">
+              <div class="package-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1537196332232-0f4e35ef4c8f?w=600&q=80"
+                  alt="Grand Sri Lanka Circuit"
+                />
+                <span class="package-badge">Premium</span>
+              </div>
+              <div class="package-body">
+                <h5 class="package-title">Grand Sri Lanka Circuit</h5>
+                <div class="package-meta">
+                  <span><i class="bi bi-clock"></i> 14 Days</span>
+                  <span><i class="bi bi-geo-alt"></i> Island-Wide</span>
+                </div>
+                <p class="package-desc">
+                  The ultimate solo caravan adventure spanning the entire island
+                  from Colombo to Jaffna and down the coast.
+                </p>
+                <div class="package-price">$999 <small>/ person</small></div>
+                <a href="contact.html" class="btn-gold">Enquire Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA BANNER ===== -->
+    <section id="cta-banner">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <span class="section-label">Custom Trip?</span>
+            <h2 class="cta-title">Can't Find What You're Looking For?</h2>
+            <p class="cta-subtitle">
+              We create custom solo caravan itineraries tailored to your
+              schedule, budget and dream destinations.
+            </p>
+            <a href="contact.html" class="btn-gold">Request Custom Package</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="main-footer">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <a class="footer-brand" href="../index.html">
+              One <span>Piece</span> Travels
+            </a>
+            <p class="footer-desc">
+              Empowering solo travellers to explore the world freely through
+              modern caravan adventures.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="social-icon"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-6">
+            <h6 class="footer-heading">Explore</h6>
+            <ul class="footer-links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="destinations.html">Destinations</a></li>
+              <li><a href="packages.html">Packages</a></li>
+              <li><a href="fleet.html">Our Fleet</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-sm-6">
+            <h6 class="footer-heading">Company</h6>
+            <ul class="footer-links">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h6 class="footer-heading">Contact</h6>
+            <ul class="footer-links">
+              <li>
+                <i class="bi bi-geo-alt footer-icon"></i>
+                42 Harbour Road, Colombo 03, Sri Lanka
+              </li>
+              <li>
+                <i class="bi bi-telephone footer-icon"></i>
+                +94 11 234 5678
+              </li>
+              <li>
+                <i class="bi bi-envelope footer-icon"></i>
+                hello@onepiecetravels.lk
+              </li>
+              <li>
+                <i class="bi bi-clock footer-icon"></i>
+                Mon – Fri, 9am – 6pm
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <p>© 2025 One Piece Travels. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
