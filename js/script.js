@@ -51,7 +51,40 @@ function initPackageFilter() {
   });
 }
 
+// ===== REGION FILTER =====
+function initRegionFilter() {
+  const buttons = document.querySelectorAll(".region-btn");
+
+  // Only run on destinations page
+  if (!buttons.length) return;
+
+  buttons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      // Remove active class from all buttons
+      buttons.forEach(function (b) {
+        b.classList.remove("active-region");
+      });
+
+      // Add active class to clicked button
+      this.classList.add("active-region");
+
+      // Get filter value
+      const filter = this.dataset.filter;
+
+      // Show or hide cards
+      document.querySelectorAll(".dest-item").forEach(function (item) {
+        if (filter === "all" || item.dataset.region === filter) {
+          item.style.display = "";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+  });
+}
+
 // ===== RUN ON PAGE LOAD =====
 document.addEventListener("DOMContentLoaded", function () {
   initPackageFilter();
+  initRegionFilter();
 });
