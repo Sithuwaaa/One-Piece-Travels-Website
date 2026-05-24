@@ -1085,3 +1085,42 @@ html {
     font-size: 0.82rem;
   }
 }
+
+/* ===== STATS STRIP ===== */
+#stats-strip {
+  padding: 60px 0;
+  background-color: var(--cloud);
+  border-bottom: 1px solid var(--border);
+}
+
+.stat-strip-item {
+  padding: 20px;
+}
+
+/* Big number */
+.stat-strip-num {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+/* Label below number */
+.stat-strip-label {
+  font-size: 0.88rem;
+  color: var(--slate);
+  font-weight: 500;
+}
+
+/* ===== RESPONSIVE — STATS STRIP ===== */
+@media (max-width: 768px) {
+  #stats-strip {
+    padding: 40px 0;
+  }
+
+  .stat-strip-num {
+    font-size: 2rem;
+  }
+}
