@@ -977,3 +977,8 @@ a {
   line-height: 1.7;
   margin-bottom: 16px;
 }
+
+/* ===== PREVENT SCROLLBAR LAYOUT SHIFT ===== */
+html {
+  overflow-y: scroll;
+}
