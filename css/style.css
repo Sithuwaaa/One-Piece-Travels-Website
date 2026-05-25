@@ -1124,3 +1124,194 @@ html {
     font-size: 2rem;
   }
 }
+
+/* ===== FLEET GRID ===== */
+#fleet-grid {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+/* Fleet card */
+.fleet-card {
+  background: var(--white);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  height: 100%;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.fleet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 48px rgba(10, 22, 40, 0.12);
+}
+
+/* Image */
+.fleet-img-wrap {
+  height: 230px;
+  overflow: hidden;
+}
+
+.fleet-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.fleet-card:hover .fleet-img-wrap img {
+  transform: scale(1.05);
+}
+
+/* Card body */
+.fleet-body {
+  padding: 24px;
+}
+
+/* Title and status row */
+.fleet-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.fleet-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0;
+}
+
+/* Status badges */
+.fleet-status {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 50px;
+}
+
+.fleet-status.available {
+  background: #e8f4f0;
+  color: #0f6e56;
+}
+
+.fleet-status.limited {
+  background: #fff3cd;
+  color: #856404;
+}
+
+/* Description */
+.fleet-desc {
+  font-size: 0.88rem;
+  color: var(--slate);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+/* Spec badges row */
+.fleet-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.spec-badge {
+  background: #e8f4f0;
+  color: #0f6e56;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Price and button row */
+.fleet-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fleet-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.fleet-price small {
+  font-size: 0.75rem;
+  color: var(--slate);
+  font-weight: 400;
+}
+
+/* ===== FLEET MODAL ===== */
+#modalContent {
+  border-radius: 20px;
+  border: none;
+  overflow: hidden;
+}
+
+#modalHeader {
+  background: var(--navy);
+  border: none;
+  padding: 20px 24px;
+}
+
+#modalHeader .modal-title {
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+}
+
+#modalBody {
+  padding: 24px;
+}
+
+.modal-fleet-desc {
+  font-size: 0.92rem;
+  color: var(--slate);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.modal-specs-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.modal-fleet-specs {
+  font-size: 0.88rem;
+  color: var(--slate);
+}
+
+#modalFooter {
+  border: none;
+  padding: 0 24px 24px;
+  display: flex;
+  gap: 10px;
+}
+
+/* ===== RESPONSIVE — FLEET ===== */
+@media (max-width: 768px) {
+  #fleet-grid {
+    padding: 50px 0;
+  }
+
+  .fleet-img-wrap {
+    height: 200px;
+  }
+
+  .fleet-card-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

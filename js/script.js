@@ -83,8 +83,42 @@ function initRegionFilter() {
   });
 }
 
+// ===== FLEET MODAL =====
+function initFleetModal() {
+  const detailBtns = document.querySelectorAll(".fleet-details-btn");
+
+  // Only run on fleet page
+  if (!detailBtns.length) return;
+
+  detailBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      // Get parent card
+      const card = btn.closest(".fleet-card");
+
+      // Get card details
+      const name = card.querySelector(".fleet-title").textContent;
+      const desc = card.dataset.desc;
+      const specs = [...card.querySelectorAll(".spec-badge")]
+        .map(function (b) {
+          return b.textContent.trim();
+        })
+        .join(", ");
+
+      // Put details into modal
+      document.getElementById("modalFleetName").textContent = name;
+      document.getElementById("modalFleetDesc").textContent = desc;
+      document.getElementById("modalFleetSpecs").textContent = specs;
+
+      // Open modal
+      const modal = new bootstrap.Modal(document.getElementById("fleetModal"));
+      modal.show();
+    });
+  });
+}
+
 // ===== RUN ON PAGE LOAD =====
 document.addEventListener("DOMContentLoaded", function () {
   initPackageFilter();
   initRegionFilter();
+  initFleetModal();
 });
