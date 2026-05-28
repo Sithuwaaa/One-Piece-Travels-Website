@@ -1315,3 +1315,41 @@ html {
     gap: 12px;
   }
 }
+
+/* ===== OUR STORY ===== */
+#our-story {
+  padding: 90px 0;
+  background-color: var(--white);
+}
+
+/* Story paragraphs */
+.story-text {
+  font-size: 0.95rem;
+  color: var(--slate);
+  line-height: 1.9;
+  margin-bottom: 18px;
+}
+
+/* Story image */
+.story-img-wrap {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 14px 48px rgba(10, 22, 40, 0.12);
+}
+
+.story-img-wrap img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+/* ===== RESPONSIVE — OUR STORY ===== */
+@media (max-width: 768px) {
+  #our-story {
+    padding: 60px 0;
+  }
+
+  .story-img-wrap img {
+    height: 280px;
+  }
+}
