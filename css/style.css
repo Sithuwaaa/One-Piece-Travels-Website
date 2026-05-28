@@ -817,6 +817,9 @@ a {
   padding: 80px 0 70px;
   position: relative;
   overflow: hidden;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
 }
 
 /* Faint background image */
@@ -832,6 +835,7 @@ a {
 #page-hero .container {
   position: relative;
   z-index: 2;
+  width: 100%;
 }
 
 /* Breadcrumb */
@@ -882,6 +886,7 @@ a {
 @media (max-width: 768px) {
   #page-hero {
     padding: 60px 0 50px;
+    min-height: 280px;
   }
 
   .page-hero-title {
@@ -1351,5 +1356,43 @@ html {
 
   .story-img-wrap img {
     height: 280px;
+  }
+}
+
+/* ===== STATS COUNTERS ===== */
+#stats-counters {
+  padding: 80px 0;
+  background-color: var(--navy);
+}
+
+.counter-item {
+  padding: 20px;
+}
+
+/* Animated number */
+.counter-num {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+/* Label */
+.counter-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+/* ===== RESPONSIVE — COUNTERS ===== */
+@media (max-width: 768px) {
+  #stats-counters {
+    padding: 50px 0;
+  }
+
+  .counter-num {
+    font-size: 2.2rem;
   }
 }

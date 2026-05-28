@@ -116,9 +116,48 @@ function initFleetModal() {
   });
 }
 
+// ===== COUNTER ANIMATION =====
+function initCounters() {
+  const counters = document.querySelectorAll(".counter-num");
+
+  // Only run on about page
+  if (!counters.length) return;
+
+  const observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          const target = parseInt(entry.target.dataset.target);
+          const suffix = entry.target.dataset.suffix || "";
+          let current = 0;
+          const step = Math.ceil(target / 60);
+
+          const timer = setInterval(function () {
+            current += step;
+            if (current >= target) {
+              current = target;
+              clearInterval(timer);
+            }
+            entry.target.textContent = current + suffix;
+          }, 25);
+
+          // Stop observing after animation
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 },
+  );
+
+  counters.forEach(function (counter) {
+    observer.observe(counter);
+  });
+}
+
 // ===== RUN ON PAGE LOAD =====
 document.addEventListener("DOMContentLoaded", function () {
   initPackageFilter();
   initRegionFilter();
   initFleetModal();
+  initCounters();
 });
