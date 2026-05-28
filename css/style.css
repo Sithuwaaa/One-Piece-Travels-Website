@@ -1396,3 +1396,51 @@ html {
     font-size: 2.2rem;
   }
 }
+
+/* ===== OUR VALUES ===== */
+#our-values {
+  padding: 90px 0;
+  background-color: var(--cloud);
+}
+
+/* Value card */
+.value-card {
+  padding: 20px 24px;
+  border-radius: 12px;
+  border-left: 4px solid var(--gold);
+  background: var(--white);
+  margin-bottom: 16px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateX(6px);
+  box-shadow: 0 6px 28px rgba(10, 22, 40, 0.08);
+}
+
+.value-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.value-desc {
+  font-size: 0.88rem;
+  color: var(--slate);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ===== RESPONSIVE — VALUES ===== */
+@media (max-width: 768px) {
+  #our-values {
+    padding: 60px 0;
+  }
+
+  .value-card {
+    padding: 16px 18px;
+  }
+}
