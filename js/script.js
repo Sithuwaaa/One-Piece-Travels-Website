@@ -154,10 +154,56 @@ function initCounters() {
   });
 }
 
+// ===== CONTACT FORM VALIDATION =====
+function initContactForm() {
+  const form = document.getElementById("contactForm");
+
+  // Only run on contact page
+  if (!form) return;
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    let valid = true;
+
+    // Check required fields
+    form.querySelectorAll("[required]").forEach(function (field) {
+      field.style.borderColor = "";
+      if (!field.value.trim()) {
+        field.style.borderColor = "#D94F2B";
+        valid = false;
+      }
+    });
+
+    // Check email format
+    const emailField = form.querySelector("[type='email']");
+    if (emailField && emailField.value) {
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(emailField.value)) {
+        emailField.style.borderColor = "#D94F2B";
+        valid = false;
+      }
+    }
+
+    // If valid show success message
+    if (valid) {
+      form.style.display = "none";
+      document.getElementById("formSuccess").style.display = "block";
+    }
+  });
+
+  // Clear error border on input
+  form.querySelectorAll(".form-input").forEach(function (field) {
+    field.addEventListener("input", function () {
+      field.style.borderColor = "";
+    });
+  });
+}
+
 // ===== RUN ON PAGE LOAD =====
 document.addEventListener("DOMContentLoaded", function () {
   initPackageFilter();
   initRegionFilter();
   initFleetModal();
   initCounters();
+  initContactForm();
 });
