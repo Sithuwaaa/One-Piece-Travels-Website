@@ -261,7 +261,7 @@ a {
   color: rgba(255, 255, 255, 0.55);
 }
 
-/* ===== RESPONSIVE — HERO ===== */
+/* ===== RESPONSIVE - HERO ===== */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.5rem;
@@ -351,7 +351,7 @@ a {
   line-height: 1.7;
 }
 
-/* ===== RESPONSIVE — WHY US ===== */
+/* ===== RESPONSIVE - WHY US ===== */
 @media (max-width: 768px) {
   .section-title {
     font-size: 1.8rem;
@@ -478,7 +478,7 @@ a {
   transform: translateY(-2px);
 }
 
-/* ===== RESPONSIVE — PACKAGES ===== */
+/* ===== RESPONSIVE - PACKAGES ===== */
 @media (max-width: 768px) {
   #featured-packages {
     padding: 60px 0;
@@ -552,7 +552,7 @@ a {
   font-weight: 500;
 }
 
-/* ===== RESPONSIVE — DESTINATIONS ===== */
+/* ===== RESPONSIVE - DESTINATIONS ===== */
 @media (max-width: 768px) {
   #top-destinations {
     padding: 60px 0;
@@ -621,7 +621,7 @@ a {
   color: rgba(255, 255, 255, 0.4);
 }
 
-/* ===== RESPONSIVE — TESTIMONIALS ===== */
+/* ===== RESPONSIVE - TESTIMONIALS ===== */
 @media (max-width: 768px) {
   #testimonials {
     padding: 60px 0;
@@ -792,7 +792,7 @@ a {
   margin: 0;
 }
 
-/* ===== RESPONSIVE — CTA & FOOTER ===== */
+/* ===== RESPONSIVE - CTA & FOOTER ===== */
 @media (max-width: 768px) {
   #cta-banner {
     padding: 60px 0;
@@ -882,7 +882,7 @@ a {
   line-height: 1.8;
 }
 
-/* ===== RESPONSIVE — PAGE HERO ===== */
+/* ===== RESPONSIVE - PAGE HERO ===== */
 @media (max-width: 768px) {
   #page-hero {
     padding: 60px 0 50px;
@@ -962,7 +962,7 @@ a {
   font-size: 0.95rem;
 }
 
-/* ===== RESPONSIVE — FILTER ===== */
+/* ===== RESPONSIVE - FILTER ===== */
 @media (max-width: 768px) {
   .filter-bar {
     padding: 18px;
@@ -1075,7 +1075,7 @@ html {
   margin-bottom: 16px;
 }
 
-/* ===== RESPONSIVE — DESTINATIONS ===== */
+/* ===== RESPONSIVE - DESTINATIONS ===== */
 @media (max-width: 768px) {
   #destinations-grid {
     padding: 40px 0 60px;
@@ -1119,7 +1119,7 @@ html {
   font-weight: 500;
 }
 
-/* ===== RESPONSIVE — STATS STRIP ===== */
+/* ===== RESPONSIVE - STATS STRIP ===== */
 @media (max-width: 768px) {
   #stats-strip {
     padding: 40px 0;
@@ -1304,7 +1304,7 @@ html {
   gap: 10px;
 }
 
-/* ===== RESPONSIVE — FLEET ===== */
+/* ===== RESPONSIVE - FLEET ===== */
 @media (max-width: 768px) {
   #fleet-grid {
     padding: 50px 0;
@@ -1348,7 +1348,7 @@ html {
   object-fit: cover;
 }
 
-/* ===== RESPONSIVE — OUR STORY ===== */
+/* ===== RESPONSIVE - OUR STORY ===== */
 @media (max-width: 768px) {
   #our-story {
     padding: 60px 0;
@@ -1386,7 +1386,7 @@ html {
   font-weight: 500;
 }
 
-/* ===== RESPONSIVE — COUNTERS ===== */
+/* ===== RESPONSIVE - COUNTERS ===== */
 @media (max-width: 768px) {
   #stats-counters {
     padding: 50px 0;
@@ -1434,7 +1434,7 @@ html {
   margin: 0;
 }
 
-/* ===== RESPONSIVE — VALUES ===== */
+/* ===== RESPONSIVE - VALUES ===== */
 @media (max-width: 768px) {
   #our-values {
     padding: 60px 0;
@@ -1504,7 +1504,7 @@ html {
   margin: 0;
 }
 
-/* ===== RESPONSIVE — TEAM ===== */
+/* ===== RESPONSIVE - TEAM ===== */
 @media (max-width: 768px) {
   #our-team {
     padding: 60px 0;
@@ -1513,5 +1513,292 @@ html {
   .team-avatar {
     width: 80px;
     height: 80px;
+  }
+}
+
+/* ===== CONTACT SECTION ===== */
+#contact-section {
+  padding: 90px 0;
+  background-color: var(--white);
+}
+
+/* Form wrapper */
+.contact-form-wrap {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 6px 28px rgba(10, 22, 40, 0.08);
+  border: 1px solid var(--border);
+}
+
+.contact-form-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.contact-form-sub {
+  font-size: 0.9rem;
+  color: var(--slate);
+  margin-bottom: 28px;
+}
+
+/* Success message */
+#formSuccess {
+  display: none;
+  background: #e8f4f0;
+  border: 1px solid #a3d9c5;
+  border-radius: 14px;
+  padding: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#formSuccess i {
+  font-size: 2.5rem;
+  color: #0f6e56;
+  display: block;
+  margin-bottom: 12px;
+}
+
+#formSuccess h5 {
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+#formSuccess p {
+  color: var(--slate);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Form label */
+.form-label-custom {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+/* Required star */
+.required {
+  color: #d94f2b;
+  margin-left: 2px;
+}
+
+/* Form input / select / textarea */
+.form-input {
+  width: 100%;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--navy);
+  background: var(--cloud);
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  appearance: none;
+}
+
+.form-input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
+  background: var(--white);
+}
+
+.form-input::placeholder {
+  color: var(--slate);
+  opacity: 0.6;
+}
+
+/* Textarea */
+textarea.form-input {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ===== CONTACT INFO CARD ===== */
+.contact-info-card {
+  background: var(--navy);
+  border-radius: 20px;
+  padding: 32px;
+  margin-bottom: 24px;
+}
+
+.contact-info-title {
+  font-size: 1.2rem;
+  color: var(--white);
+  margin-bottom: 24px;
+  font-family: var(--font-heading);
+}
+
+/* Info item row */
+.contact-info-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+/* Icon circle */
+.contact-info-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(201, 168, 76, 0.15);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  flex-shrink: 0;
+  font-size: 0.9rem;
+}
+
+.contact-info-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+
+.contact-info-value {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.6;
+}
+
+.contact-info-note {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 2px;
+}
+
+/* Social row inside info card */
+.contact-social {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  margin-top: 4px;
+}
+
+.contact-social-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+/* Map placeholder */
+.map-placeholder {
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--cloud);
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.map-placeholder i {
+  font-size: 2rem;
+  color: var(--gold);
+}
+
+.map-name {
+  font-weight: 700;
+  color: var(--navy);
+  font-size: 0.95rem;
+}
+
+.map-address {
+  font-size: 0.85rem;
+  color: var(--slate);
+}
+
+/* ===== RESPONSIVE - CONTACT ===== */
+@media (max-width: 768px) {
+  #contact-section {
+    padding: 60px 0;
+  }
+
+  .contact-form-wrap {
+    padding: 24px;
+  }
+
+  .contact-info-card {
+    padding: 24px;
+  }
+}
+
+/* ===== FAQ SECTION ===== */
+#faq-section {
+  padding: 90px 0;
+  background-color: var(--cloud);
+}
+
+/* FAQ accordion item */
+.faq-item {
+  border: 1px solid var(--border) !important;
+  border-radius: 12px !important;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+/* FAQ button */
+.faq-btn {
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  color: var(--navy) !important;
+  background: var(--white) !important;
+  padding: 18px 20px !important;
+  box-shadow: none !important;
+}
+
+.faq-btn:not(.collapsed) {
+  color: var(--gold) !important;
+  background: var(--white) !important;
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-btn::after {
+  filter: invert(0);
+}
+
+/* FAQ body */
+.faq-body {
+  font-size: 0.92rem;
+  color: var(--slate);
+  line-height: 1.8;
+  padding: 16px 20px !important;
+  background: var(--white);
+}
+
+/* ===== RESPONSIVE - FAQ ===== */
+@media (max-width: 768px) {
+  #faq-section {
+    padding: 60px 0;
+  }
+
+  .faq-btn {
+    font-size: 0.88rem !important;
+    padding: 14px 16px !important;
   }
 }
